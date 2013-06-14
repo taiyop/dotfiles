@@ -17,6 +17,7 @@ set shiftwidth=4
 set expandtab
 set tabstop=4
 set backspace=indent,eol,start  " Backspaceで色々削除可能
+set showmode                     " 現在のモードを表示
 " 不可視文字表示
 set list
 set listchars=tab:>-,trail:-
@@ -78,6 +79,11 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 "}}}
 
+" CTRL-hjklでウィンドウ移動
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
 
 " Uniteの設定{{{
 let g:unite_source_menu_menus = {}
