@@ -40,9 +40,9 @@ set undolevels=10000              " Undoの回数制限
 set statusline&
 set statusline=%<%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}[POS=%l,%v,%p%%]
 set statusline+=%{fugitive#statusline()}
-set statusline+=%=%{g:NyanModoki()}
+" set statusline+=%=%{g:NyanModoki()}
 set laststatus=2
-let g:nyan_modoki_select_cat_face_number = 4
+" let g:nyan_modoki_select_cat_face_number = 4
 set showcmd               " 入力中のコマンド表示
 setlocal bufhidden=delete " バッファ閉じた時に削除
 set clipboard=unnamed,autoselect "無名レジスタを*レジスタにも入るように

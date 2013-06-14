@@ -1,14 +1,12 @@
 set nocompatible               " Be iMproved
 
-filetype plugin indent off	" required!
+filetype plugin indent off     " required!
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
+  "=====this also automatically do 'filetype off'====
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
-
-"=====this also automatically do 'filetype off'====
-call neobundle#rc(expand('~/.vim/bundle/'))
-
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -23,22 +21,23 @@ NeoBundle 'Shougo/vimproc', {
       \   },
       \ }
 " Edit {{{
-NeoBundle 'scrooloose/nerdcommenter.git'	" NERD_commenter.vim :最強コメント処理 
-NeoBundle 'nathanaelkane/vim-indent-guides'	" indent の可視化==>indentの高さ関係を可視
-NeoBundle 'Shougo/vimshell'			" shellモードがvim編集中でも出来る
-NeoBundle 'Shougo/unite.vim'			" vimでなんでも出来るようにする統合インターフェース。
+NeoBundle 'scrooloose/nerdcommenter.git'    " NERD_commenter.vim :最強コメント処理 
+NeoBundle 'nathanaelkane/vim-indent-guides' " indent の可視化==>indentの高さ関係を可視
+NeoBundle 'Shougo/vimshell'                 " shellモードがvim編集中でも出来る
+NeoBundle 'Shougo/unite.vim'                " vimでなんでも出来るようにする統合インターフェース。
 "以下にあるようなプラグインを入れる事でなんでも出来るようになる
 "=====https://github.com/Shougo/unite.vim/wiki/unite-plugins===
-NeoBundle 'kmnk/vim-unite-giti'			" vim上でgitコマンド使えるぜ便利!
-NeoBundle 'ujihisa/unite-colorscheme'		" vimのカラースキーマを気軽に変更出来るぜヒャッハー!
-NeoBundle 'Shougo/neocomplcache'		" 入力の自動補完。プログラミンshougoさんが提供する、スニペットとして随時登録
-NeoBundle 'Shougo/neosnippet'			" shougoさんが提供する、スニペット登録データ
-NeoBundle 'yuroyoro/smooth_scroll.vim'		" C-f等のスクロールがスムーズになる
-NeoBundle 'vim-ruby/vim-ruby'			" vimでrubyを使うための最も基本的な拡張機能
-NeoBundle 'tpope/vim-rails'			" vimでrailsを使うためのもの
-NeoBundle 'thinca/vim-quickrun'			" 編集中のファイルをvim上で実行出来る
-NeoBundle 'tpope/surround.vim'			" 範囲選択したテキストを指定の括弧で囲める
-NeoBundle "osyo-manga/vim-anzu"			" 現在の検索位置を表示
+NeoBundle 'kmnk/vim-unite-giti'             " vim上でgitコマンド使えるぜ便利!
+NeoBundle 'ujihisa/unite-colorscheme'       " vimのカラースキーマを気軽に変更出来るぜヒャッハー!
+NeoBundle 'Shougo/neocomplcache'            " 入力の自動補完。プログラミンshougoさんが提供する、スニペットとして随時登録
+NeoBundle 'Shougo/neosnippet'               " shougoさんが提供する、スニペット登録データ
+NeoBundle 'yuroyoro/smooth_scroll.vim'      " C-f等のスクロールがスムーズになる
+NeoBundle 'vim-ruby/vim-ruby'               " vimでrubyを使うための最も基本的な拡張機能
+NeoBundle 'tpope/vim-rails'                 " vimでrailsを使うためのもの
+NeoBundle 'thinca/vim-quickrun'             " 編集中のファイルをvim上で実行出来る
+" NeoBundle 'tpope/surround.vim'              " 範囲選択したテキストを指定の括弧で囲める
+NeoBundle "osyo-manga/vim-anzu"             " 現在の検索位置を表示
+NeoBundle 'tpope/vim-fugitive'              " git操作
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 "=====以下、言語ごとに遅延読み込み
@@ -77,7 +76,7 @@ NeoBundleLazy 'eagletmt/ghcmod-vim', {
 
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
-"NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'Lokaltog/vim-easymotion'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
