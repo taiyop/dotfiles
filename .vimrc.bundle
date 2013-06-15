@@ -38,6 +38,7 @@ NeoBundle 'thinca/vim-quickrun'             " 編集中のファイルをvim上�
 " NeoBundle 'tpope/surround.vim'              " 範囲選択したテキストを指定の括弧で囲める
 NeoBundle "osyo-manga/vim-anzu"             " 現在の検索位置を表示
 NeoBundle 'tpope/vim-fugitive'              " git操作
+NeoBundle 'scrooloose/nerdtree'             " プロジェクトTreeの表示
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 "=====以下、言語ごとに遅延読み込み
