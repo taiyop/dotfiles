@@ -219,3 +219,14 @@ call unite#custom_action('openable', 'dwm_new', s:action)
 unlet s:action
 "}}}
 
+"syntastic {{{
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
+let g:syntastic_mode_map = {
+      \  'mode': 'active',
+      \ 'active_filetypes': ['ruby', 'javascript'],
+      \ 'passive_filetypes': []
+      \ }
+
+" }}}

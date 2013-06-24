@@ -39,6 +39,7 @@ NeoBundle 'thinca/vim-quickrun'             " 編集中のファイルをvim上�
 NeoBundle "osyo-manga/vim-anzu"             " 現在の検索位置を表示
 NeoBundle 'tpope/vim-fugitive'              " git操作
 NeoBundle 'scrooloose/nerdtree'             " プロジェクトTreeの表示
+NeoBundle 'scrooloose/syntastic.git'        " 構文チェック環境を整えるツール
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 "=====以下、言語ごとに遅延読み込み
