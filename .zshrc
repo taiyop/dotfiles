@@ -2,6 +2,8 @@ alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
 
+eval `ssh-agent -k`
+ssh-add ~/.ssh/idname
 #以下のサイトを参考にした。
 #https://gist.github.com/mollifier/4979906
 
