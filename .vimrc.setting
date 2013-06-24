@@ -230,3 +230,4 @@ let g:syntastic_mode_map = {
       \ }
 
 " }}}
+let g:syntastic_python_checkers=['jshint']
