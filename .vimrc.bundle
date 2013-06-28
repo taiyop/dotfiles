@@ -44,6 +44,7 @@ NeoBundle 'kana/vim-textobj-user'           " textobjを作るための物
 NeoBundle 'kana/vim-textobj-fold'           " 折りたたまれた部分をtextobjに
 NeoBundle 'kana/vim-textobj-indent'         " インデントされた部分をtextobjに
 NeoBundle 'h1mesuke/textobj-wiw'            " wordの中の単語をtextobjに
+NeoBundle 'tomtom/tcomment_vim'             " ソースコードをコメントアウトできる機能
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 "=====以下、言語ごとに遅延読み込み
