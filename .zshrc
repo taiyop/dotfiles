@@ -4,6 +4,10 @@ alias safari="open -a Safari.app"
 
 export PATH=/usr/local/share/npm/bin:$PATH
 
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init - zsh)"
+export CC=/usr/bin/gcc-4.2
+
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
 #https://gist.github.com/mollifier/4979906
