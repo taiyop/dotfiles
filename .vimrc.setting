@@ -231,3 +231,4 @@ let g:syntastic_mode_map = {
 
 " }}}
 let g:syntastic_python_checkers=['jshint']
+let g:indent_guides_enable_on_vim_startup = 1
