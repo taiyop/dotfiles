@@ -6,7 +6,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
-export CC=/usr/bin/gcc-4.2
+#export CC=/usr/bin/gcc-4.2
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
