@@ -2,7 +2,7 @@ alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
 
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
