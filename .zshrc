@@ -1,6 +1,7 @@
 alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
+alias mou="open -a Mou.app"
 
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
