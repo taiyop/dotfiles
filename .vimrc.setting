@@ -13,9 +13,9 @@ set nobackup        " バックアップファイル作らない
 set showmatch       " 対応する括弧の表示
 " デフォルトインデント
 set autoindent smartindent
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
-set tabstop=4
+set tabstop=2
 set backspace=indent,eol,start  " Backspaceで色々削除可能
 set showmode                     " 現在のモードを表示
 " 不可視文字表示

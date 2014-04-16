@@ -47,6 +47,8 @@ NeoBundle 'h1mesuke/textobj-wiw'            " wordの中の単語をtextobjに
 NeoBundle 'tomtom/tcomment_vim'             " ソースコードをコメントアウトできる機能
 NeoBundle 'tomasr/molokai'                  " molokaiのcolorschemeを設定
 "NeoBundle 'csscomb/CSScomb'                 " csscomb等のcssの並び順を整列出来る機能
+NeoBundle 'msanders/cocoa.vim'              "xcodeプラグイン
+NeoBundle 'cakebaker/scss-syntax.vim'        "scss syntax
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 "=====以下、言語ごとに遅延読み込み

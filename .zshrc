@@ -1,7 +1,11 @@
+# awsに接続するとき用の設定読み込み
+source ~/.zshrc.aws
+
 alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
 alias mou="open -a Mou.app"
+alias be="bundle exec"
 
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 

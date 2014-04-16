@@ -1,9 +1,21 @@
 [user]
-  name = Taiyo Akashi
-  email = onibakidd@gmail.com
+	name = Taiyo Akashi
+	email = onibakidd@gmail.com
 [color]
   status = auto
   diff = auto
   branch = auto
   interactive = auto
   grep = auto
+[core]
+	quotepath = false
+	excludesfile = /Users/taiyop/.gitignore_global
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = vimdiff
