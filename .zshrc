@@ -1,17 +1,25 @@
 # awsに接続するとき用の設定読み込み
 source ~/.zshrc.aws
 
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"' 
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
 alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
 alias mou="open -a Mou.app"
 alias be="bundle exec"
 
+
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
 #export CC=/usr/bin/gcc-4.2
+
+# for docker
+export DOCKER_HOST=tcp://127.0.0.1:4243 
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
