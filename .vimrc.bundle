@@ -51,6 +51,13 @@ NeoBundle 'msanders/cocoa.vim'              "xcodeプラグイン
 NeoBundle 'cakebaker/scss-syntax.vim'        "scss syntax
 
 NeoBundle 'altercation/vim-colors-solarized.git'
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+NeoBundle 'slim-template/vim-slim.git'
+syntax enable
+filetype plugin indent on
+
 "=====以下、言語ごとに遅延読み込み
 "" C++
 NeoBundleLazy 'Rip-Rip/clang_complete', {
