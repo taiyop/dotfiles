@@ -1,5 +1,6 @@
 # awsに接続するとき用の設定読み込み
 source ~/.zshrc.aws
+source ~/.zshrc.local
 
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"' 
@@ -12,7 +13,8 @@ alias mou="open -a Mou.app"
 alias be="bundle exec"
 
 
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
+# export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/lobal/bin:$PATH
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
