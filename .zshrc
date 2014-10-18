@@ -16,12 +16,16 @@ alias be="bundle exec"
 # export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/bin:/usr/lobal/bin:$PATH
 
+#nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
 #export CC=/usr/bin/gcc-4.2
 
 # for docker
 export DOCKER_HOST=tcp://127.0.0.1:4243 
+
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。

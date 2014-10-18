@@ -49,7 +49,8 @@ NeoBundle 'tomasr/molokai'                  " molokaiのcolorschemeを設定
 "NeoBundle 'csscomb/CSScomb'                 " csscomb等のcssの並び順を整列出来る機能
 NeoBundle 'msanders/cocoa.vim'              "xcodeプラグイン
 NeoBundle 'cakebaker/scss-syntax.vim'        "scss syntax
-NeoBundle 'kchmck/vim-coffee-script'        " coffee-script-syntax
+NeoBundle 'kchmck/vim-coffee-script'        "coffeescript syntax + 自動compile
+NeoBundle 'claco/jasmine.vim'               " js BDDツール
 
 NeoBundle 'altercation/vim-colors-solarized.git'
 
