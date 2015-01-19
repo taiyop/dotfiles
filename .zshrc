@@ -10,7 +10,16 @@ alias chrome="open -a Google\ Chrome.app"
 alias firefox="open -a Firefox.app"
 alias safari="open -a Safari.app"
 alias mou="open -a Mou.app"
+alias rubymine="open -a Rubymine.app"
 alias be="bundle exec"
+
+# git alias
+alias gst="git status"
+alias gco="git checkout"
+
+if [ "`boot2docker status`" = "running" ]; then
+  $(boot2docker shellinit)
+fi
 
 
 # export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
@@ -121,3 +130,4 @@ case ${OSTYPE} in
         ;;
 esac
 
+export PATH=/usr/local/bin:$PATH

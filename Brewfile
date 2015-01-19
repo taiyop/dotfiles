@@ -32,7 +32,14 @@ cask install skitch
 cask install gyazo
 # 画像圧縮
 cask install imageoptim
+# クリップボード履歴
+cask install clipmenu
 
+cask install dash
+
+# 音声解析キット
+tap uetchy/nlp
+install julius julius-dictation-kit
 
 cask cleanup
 
