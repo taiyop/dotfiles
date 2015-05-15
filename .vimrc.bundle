@@ -53,6 +53,7 @@ NeoBundle 'kchmck/vim-coffee-script'        "coffeescript syntax + 自動compile
 NeoBundle 'claco/jasmine.vim'               " js BDDツール
 
 NeoBundle 'altercation/vim-colors-solarized.git'
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
