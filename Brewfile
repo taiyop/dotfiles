@@ -12,6 +12,7 @@ install gcc
 install curl
 install tig
 install git-flow
+install ctags
 
 install brew-cask
 linkapps
