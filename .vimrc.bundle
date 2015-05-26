@@ -56,8 +56,8 @@ NeoBundle 'altercation/vim-colors-solarized.git'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'soramugi/auto-ctags.vim'         " ctags作成
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 NeoBundle 'slim-template/vim-slim.git'
 syntax enable
 filetype plugin indent on
