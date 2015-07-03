@@ -19,3 +19,5 @@
 	trustExitCode = true
 [merge]
 	tool = vimdiff
+[fetch]
+	prune = true
