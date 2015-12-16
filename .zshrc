@@ -35,6 +35,14 @@ eval "$(rbenv init - zsh)"
 # for docker
 export DOCKER_HOST=tcp://127.0.0.1:4243 
 
+# pyenv
+# export PATH="$HOME/.pyenv/shims:$PATH"
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+export PATH=${PYENV_ROOT}/bin:$PATH
+  eval "$(pyenv init -)"
+fi
+
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
