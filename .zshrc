@@ -28,8 +28,10 @@ export PATH=/usr/local/share/npm/bin:/usr/lobal/bin:$PATH
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-export PATH="$HOME/.rbenv/shims:$PATH"
-eval "$(rbenv init - zsh)"
+#export PATH="$HOME/.rbenv/shims:$PATH"
+#eval "$(rbenv init - zsh)"
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 #export CC=/usr/bin/gcc-4.2
 
 # for docker
