@@ -14,7 +14,7 @@ install tig
 install git-flow
 install ctags
 
-install brew-cask
+install caskroom/cask/brew-cask
 linkapps
 cleanup
 

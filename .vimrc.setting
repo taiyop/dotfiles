@@ -9,6 +9,7 @@ set fileformats=unix,dos,mac
 set number          " 行番号表示
 set showtabline=2   " タブページ常に表示
 set noswapfile      " スワップファイル作らない
+set noundofile      " undoファイルをつくらない
 set nobackup        " バックアップファイル作らない
 set showmatch       " 対応する括弧の表示
 " デフォルトインデント
@@ -22,6 +23,7 @@ set showmode                     " 現在のモードを表示
 set list
 set listchars=tab:>-,trail:-
 set whichwrap=b,s,h,l           " カーソルが行頭，行末で止まらない
+set colorcolumn=80              "１行の文字数を80文字にする"
 " 全角文字をちゃんとあつかう
 if has('gui_running')
   set ambiwidth=double

@@ -21,6 +21,25 @@ if [ "`boot2docker status`" = "running" ]; then
   $(boot2docker shellinit)
 fi
 
+#入力途中の履歴補完を有効化する
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+#入力途中の履歴補完
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+
+#インクリメンタルサーチの設定
+#bindkey "^R" history-incremental-search-backward
+#bindkey "^S" history-incremental-search-forward
+
+#履歴のインクリメンタル検索でワイルドカード利用可能
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
+
+#ヒストリの一覧を読みやすい形に変更
+HISTTIMEFORMAT="[%Y/%M/%D %H:%M:%S] "
 
 # export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/bin:/usr/lobal/bin:$PATH
