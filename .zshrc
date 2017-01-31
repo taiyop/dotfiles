@@ -42,7 +42,7 @@ bindkey '^S' history-incremental-pattern-search-forward
 HISTTIMEFORMAT="[%Y/%M/%D %H:%M:%S] "
 
 # export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/share/npm/bin:/usr/lobal/bin:$PATH
+export PATH=/usr/local/bin/:/usr/local/share/npm/bin:$PATH
 
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
