@@ -1,0 +1,21 @@
+################################################
+## 画面設定
+#################################################
+#
+## main viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+# デフォルト
+# # set main-view = date author commit-title:graph=yes,refs=yes
+
+bind diff ; view-next
+bind diff l scroll-right
+bind diff h scroll-left
+bind generic g move-first-line
+bind main    g move-first-line
+# デフォルトの bind generic G !git gc を無効化する
+bind generic G none
+bind main G none
+bind generic G move-last-line
+# ページダウン & ページアップをvim風に
+bind generic <Ctrl-B> move-page-up
+bind generic <Ctrl-F> move-page-down
