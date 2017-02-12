@@ -1,6 +1,10 @@
 # awsに接続するとき用の設定読み込み
-source ~/.zshrc.aws
-source ~/.zshrc.local
+if [ -f ~/.zshrc.aws ]; then
+  source ~/.zshrc.aws
+fi
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
 
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"' 
@@ -47,7 +51,7 @@ export PATH=/usr/local/bin/:/usr/local/share/npm/bin:$PATH
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-#export PATH="$HOME/.rbenv/shims:$PATH"
+# export PATH="$HOME/.rbenv/shims:$PATH"
 #eval "$(rbenv init - zsh)"
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
@@ -160,3 +164,13 @@ case ${OSTYPE} in
 esac
 
 export PATH=/usr/local/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/taiyop/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/taiyop/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/taiyop/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/taiyop/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi

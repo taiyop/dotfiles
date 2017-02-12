@@ -62,6 +62,8 @@ filetype plugin indent off     " required!
   NeoBundle 'christoomey/vim-tmux-navigator'
   NeoBundle 'soramugi/auto-ctags.vim'         " ctags作成
 
+  NeoBundle 'leafgarland/typescript-vim.git'  " TypeScript-Syntax Highlight
+
   " set rtp+=~/.vim/bundle/vundle/
   " call vundle#rc()
   NeoBundle 'slim-template/vim-slim.git'

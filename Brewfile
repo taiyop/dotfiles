@@ -13,6 +13,7 @@ install curl
 install tig
 install git-flow
 install ctags
+install reattach-to-user-namespace
 
 install caskroom/cask/brew-cask
 linkapps
