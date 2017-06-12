@@ -21,10 +21,6 @@ alias be="bundle exec"
 alias gst="git status"
 alias gco="git checkout"
 
-if [ "`boot2docker status`" = "running" ]; then
-  $(boot2docker shellinit)
-fi
-
 #入力途中の履歴補完を有効化する
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -45,29 +41,21 @@ bindkey '^S' history-incremental-pattern-search-forward
 #ヒストリの一覧を読みやすい形に変更
 HISTTIMEFORMAT="[%Y/%M/%D %H:%M:%S] "
 
-# export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
+# android sdk
+export PATH=$PATH:/Users/taiyop/Library/Android/sdk/platform-tools
+
 export PATH=/usr/local/bin/:/usr/local/share/npm/bin:$PATH
 
-#nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# export PATH="$HOME/.rbenv/shims:$PATH"
-#eval "$(rbenv init - zsh)"
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
 #export CC=/usr/bin/gcc-4.2
+
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 
 # for docker
 export DOCKER_HOST=tcp://127.0.0.1:4243 
-
-# pyenv
-# export PATH="$HOME/.pyenv/shims:$PATH"
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-export PATH=${PYENV_ROOT}/bin:$PATH
-  eval "$(pyenv init -)"
+if [ "`docker-machine status`" = "Running" ]; then
+  eval "$(docker-machine env default)"
 fi
-
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
@@ -120,11 +108,17 @@ setopt no_beep
 # cdしたら自動的にpushdする
 setopt auto_pushd
 
+## 補完候補を一覧表示
+setopt auto_list
+
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
 
 #同時に起動したzshの間でヒストリを共有する
 setopt share_history
+
+# $HISTFILEに時間も記録
+setopt extended_history
 
 #同じコマンドをヒストリに残さない
 #setopt hist_ignore_all_dups
@@ -162,8 +156,6 @@ case ${OSTYPE} in
         #Linux用の設定
         ;;
 esac
-
-export PATH=/usr/local/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/taiyop/Downloads/google-cloud-sdk/path.zsh.inc ]; then

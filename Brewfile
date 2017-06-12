@@ -43,6 +43,8 @@ cask install rdm
 
 cask install atom
 
+cask install aws-cli
+
 # 音声解析キット
 tap uetchy/nlp
 install julius julius-dictation-kit
