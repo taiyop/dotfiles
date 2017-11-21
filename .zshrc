@@ -17,6 +17,8 @@ alias mou="open -a Mou.app"
 alias rubymine="open -a Rubymine.app"
 alias be="bundle exec"
 
+alias dc="sudo docker-compose"
+
 # git alias
 alias gst="git status"
 alias gco="git checkout"
@@ -56,6 +58,9 @@ export DOCKER_HOST=tcp://127.0.0.1:4243
 if [ "`docker-machine status`" = "Running" ]; then
   eval "$(docker-machine env default)"
 fi
+
+# yarn
+export PATH=$PATH:/usr/local/Cellar/yarn/1.2.1/bin
 
 eval `ssh-agent -k`
 #以下のサイトを参考にした。
@@ -166,3 +171,5 @@ fi
 if [ -f /Users/taiyop/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/taiyop/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

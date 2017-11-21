@@ -98,7 +98,7 @@ filetype plugin indent off     " required!
   NeoBundleLazy 'eagletmt/ghcmod-vim', {
         \ 'autoload' : {'filetype' : ['haskell']}
         \ }
-
+  NeoBundle 'othree/yajs.vim'
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
