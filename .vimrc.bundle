@@ -103,6 +103,13 @@ filetype plugin indent off     " required!
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
+  NeoBundle 'posva/vim-vue'
+
+  " defaultのmatchparenのHighlight_Matching_Pair()-ハイライト機能が遅いと思われるので修正
+  let g:loaded_matchparen = 1
+  NeoBundle 'itchyny/vim-parenmatch'
+
+
  call neobundle#end()
 
  " Required:

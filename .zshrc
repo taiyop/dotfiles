@@ -16,8 +16,7 @@ alias safari="open -a Safari.app"
 alias mou="open -a Mou.app"
 alias rubymine="open -a Rubymine.app"
 alias be="bundle exec"
-
-alias dc="sudo docker-compose"
+alias dc="docker-compose"
 
 # git alias
 alias gst="git status"
@@ -54,10 +53,16 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # for docker
-export DOCKER_HOST=tcp://127.0.0.1:4243 
-if [ "`docker-machine status`" = "Running" ]; then
-  eval "$(docker-machine env default)"
-fi
+# export DOCKER_HOST=tcp://127.0.0.1:4243 
+# if [ "`docker-machine status`" = "Running" ]; then
+#  eval "$(docker-machine env default)"
+# fi
+
+# docker-machineの名残の影響でないとsudo必要になる
+unset DOCKER_TLS_VERIFY
+unset DOCKER_CERT_PATH
+unset DOCKER_MACHINE_NAME
+unset DOCKER_HOST
 
 # yarn
 export PATH=$PATH:/usr/local/Cellar/yarn/1.2.1/bin
@@ -173,3 +178,4 @@ if [ -f /Users/taiyop/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
